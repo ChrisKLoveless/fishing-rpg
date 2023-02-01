@@ -26,3 +26,13 @@ export const changeState = (prop) => {
     });
   };
 };
+
+export const decreaseState = (prop) => {
+  return (value) => {
+    return(state) => ({
+      ...state,
+      [prop]: (state[prop] || 0) - value
+    });
+  };
+};
+
