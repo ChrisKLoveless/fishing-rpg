@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=development",
-    "start": "npm run build && webpack-dev-server --open --mode=development",
+    "start": "npm run build && webpack serve --open --mode=development",
     "lint": "eslint src/*.js",
     "test": "jest --coverage",
     "predeploy": "npm run build",
@@ -36,6 +36,7 @@
     "webpack-dev-server": "^3.11.3"
   },
   "dependencies": {
-    "bootstrap": "^4.5.3"
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.6.3"
   }
 }
