@@ -7,6 +7,8 @@ export function createPlayer() {
   };
 }
 
+
+// State functions not used 
 export const storeState = () => {
   let currentState = {};
   return (stateChangeFunction = state => state) => {
