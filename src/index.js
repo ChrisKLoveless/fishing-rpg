@@ -27,12 +27,12 @@ function addNewPlayer() {
   setInterval(function () {
     thisPlayer.energy -= 1;
     $(`#energy-value-${thisPlayer.id}`).text(`Energy: ${thisPlayer.energy}`);
-  }, 500);
+  }, 1500);
 
   setInterval(function () {
     thisPlayer.level += 1;
     $(`#level-value-${thisPlayer.id}`).text(`Level: ${thisPlayer.level}`);
-  }, 10000);
+  }, 30000);
 }
 
 window.onload = function () {
@@ -69,8 +69,8 @@ function createPlayerElements(playerObject) {
     else {
       $(`#hook-${playerObject.id}`).removeAttr("class");
       setTimeout(() => {
-        const hook = getRandomInt(2);
-        if (hook === 0) {
+        const hook = getRandomInt(3);
+        if (hook === 0 || hook === 1) {
           $(`#hook-${playerObject.id}`).html(`Hook:<br><em>It got away!</em>`);
         }
         else {
@@ -78,7 +78,7 @@ function createPlayerElements(playerObject) {
           playerObject.net += 1;
           $(`#fish-value-${playerObject.id}`).text(`Fishing Net: ${playerObject.net}`);
         }
-      }, 2000);
+      }, 1500);
     }
   });
 
